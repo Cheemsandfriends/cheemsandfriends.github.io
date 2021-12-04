@@ -4,8 +4,9 @@
     border: rgba(247, 230, 0, 0.336);
     color: rgb(107, 107, 107);
 }
-p {
+.intro {
     color:black;
+    font-size: 20px;
 }
 body {
     color: rgb(255, 255, 255);
