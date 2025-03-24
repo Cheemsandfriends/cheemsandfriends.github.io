@@ -1,0 +1,74 @@
+---
+eleventyExcludeFromCollections: true
+title: BLOG
+layout: default
+css: blog.css
+---
+
+<div class="divArt">
+
+    <div style="margin-bottom: 150px;"></div>
+    <!-- Now, if your first response to this is how disgusting this shit looks, I'd say you were right, I fucking hate this lol -->
+    {% for post in collections.blog %}
+
+
+
+        
+
+        {% if post == collections.blog.last %}
+            <a href="{{ post.url }}" style="margin-bottom: 20px;">
+                <h1 id="postTitle" align="center">{{ post.data.title }}</h1>
+
+                    
+                    {% if post.data.description != undefined %}
+                        {{ post.data.description }}
+                    {% else %}
+
+                    {% endif %}
+            </a>
+            
+        {% else %}
+            <a href="{{ post.url }}"> 
+                <h1 id="postTitle" align="center">{{ post.data.title }}</h1>
+
+                    
+                    {% if post.data.description != undefined %}
+                        {{ post.data.description }}
+                    {% else %}
+
+                    {% endif %}
+            </a>
+        {% endif %}
+        
+    {% endfor %}
+</div>
+
+
+<style>
+    div.divArt > a {
+        margin-top: -20px;
+        transition: background-color, 0.3s;
+        display: flex;
+        background-color: white;
+    }
+    div.divArt > a:hover {
+        background-color:aliceblue;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background-color, 0.3s;
+        transition: padding, 0.3s;
+    }
+    .divArt > a {
+        background: white;
+        border-radius: 16px;
+        display: flex;
+        padding: 20px;
+        padding-top: 10px;
+        flex-flow: column nowrap; /* A dirty way to fix the issue with images fucking up the dimensions of the article. bleh! */
+        -webkit-box-shadow: 0px 0px 36px -10px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 36px -10px rgba(0,0,0,1);
+        box-shadow: 0px 0px 36px -10px rgba(0,0,0,1);
+
+        word-wrap: break-word;
+    }
+</style>

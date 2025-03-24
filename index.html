@@ -1,18 +1,76 @@
-<!--Ok, So This is a test cos I barely came from a FreeCodeCamp Tutorial lol-->
-<!DOCTYPE html>
-<html>
- <head>
-     <h1 class="title">
-        Cheems And Friends
-     </h1>
-     <link rel="stylesheet" href="style.css">
- </head>
- <body>
-     <p class="intro">
-        Hello! I'm Cheems And this is my Page LOL
-     </p>
-     <h1 align="center" style="color: red;">
-      Work in progress!
-     </h1>
- </body>
-</html>
+---
+layout: default
+css: posts.css
+---
+
+
+<div id="Recent">
+    <h1 id="hRecent" >Recent Posts:</h1>
+
+    <div class="divArt" id="recentDivArt">
+    
+        <article id="RecentArticle">
+            <h1 id="RecentPostName">{{ collections.blog.first.data.title }}</h1>
+
+            <p id="RecentText">{{ collections.blog.first.data.description }}</p>
+            
+        </article>
+</div>
+</div>
+
+<div>
+    <h1>Who am I?</h1>
+
+    <div class="divArt">
+        <article>
+            <h1>About Me</h1>
+            <p>
+                I'm CheemsAndFriends!
+                You've seen me around the net with the same name, maybe with "CheemsAndFriends", "CheemsAndFriendos", "Miss Muffin", so many aliases these days huh?
+
+                Check the <a href="/about">About Me</a> page to get more info
+            </p>
+        </article>
+    </div>
+</div>
+
+<div id="counter">
+
+    <p id="counterText">Visitors:</p>
+
+    <div>
+        <script type="text/javascript" src="https://counter.websiteout.com/js/4/0/0/0"></script>
+
+    </div>
+    
+</div>
+<script src="{{ 'Recent3D.js' | getAsset}}"></script>
+<style>
+    body > div {
+        max-width: fit-content;
+        margin-left: 200px;
+    }
+    div > h1 {
+        max-width: fit-content;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .divArt {
+        margin: 0 60px;
+        max-width: max-content;
+    }
+    #RecentPostName {
+        font-size: clamp(1px, 3vw, 32px);
+    }
+    #RecentText {
+        font-size: clamp(1px, 1vw, 24px);
+    }
+    #counter {
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #counterText {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-left: 10px;
+    }
+</style>

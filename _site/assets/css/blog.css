@@ -1,0 +1,83 @@
+:root {
+    background-color: lightgrey;
+}
+html > body {
+    margin: 0;
+    margin-top: 100px;
+    height: 100%;
+}
+.divArt > a {
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    padding: 20px;
+    padding-top: 10px;
+    flex-flow: column nowrap; /* A dirty way to fix the issue with images fucking up the dimensions of the a. bleh! */
+    -webkit-box-shadow: 0px 0px 36px -10px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 36px -10px rgba(0,0,0,1);
+    box-shadow: 0px 0px 36px -10px rgba(0,0,0,1);
+
+    word-wrap: break-word;
+}
+span {
+    margin: auto;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+span:hover {
+    color: #000000,
+}
+a > * > a, a > a
+{
+    color: cadetblue;
+}
+a > audio
+{
+    max-width: 250px;
+    border-radius: 30px;
+    background: none;
+    filter:   hue-rotate(0deg) saturate(200%) contrast(200%);
+}
+a > h1 {
+    font-size: 100%;
+    font-size: 32px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+a > p {
+    font-size: 100%;
+    font-size: 25px;
+    font-family: fantasy;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+a > p > b {
+    color: royalblue;
+}
+
+a > hr {
+    width: 50%;
+    margin: auto;
+    color: black;
+    height: 3px;
+    background-color: black;
+    border: none;
+
+    border-radius: 10px;
+
+}
+
+.divArt {
+    max-width: 70%;
+    
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+#divArt > a {
+    font-family: Arial;
+}
+code {
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-family: monospace;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | titleFilter }}</title>
+    
+    <link rel="stylesheet" href="{{ 'bundle.css' | getAsset }}">
+    <link rel="stylesheet" href="{{ css | getAsset }}">
+</head>
+
+<footer>
+    <div id="rect-footer"></div>
+    <nav id="icons-footer">
+        {{ icons | iconify }}
+    </nav>
+</footer>
+<body>
+    {{ content }}
+</body>
+<header>
+    <div id="whiteBar-header"></div>
+    <div id="header-contents">
+        <div id="icon-title">
+            <a href="/">
+                <img src="https://avatars.githubusercontent.com/u/84867412" id="icon-header" />
+            </a>
+            <div id="icon-Texts">
+                    <h1 id="title-header">
+                        <a href="/">Cheemsandfriends</a>
+                    </h1>
+                    <p id="subTitle-header">Average programmer</p>
+                    <script src="{{ 'randomText.js' | getAsset}}"></script>
+            </div>
+            <nav class="referrals">
+                <a href="/about">About</a>
+                <a href="/blog">Blog</a>
+            </nav>
+        </div>
+    </div>
+    
+</header>
+
+<script src="{{ 'scrollDown.js' | getAsset}}"></script>
