@@ -1,7 +1,7 @@
 const date = require("date-and-time");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
-const urlSite = "http://localhost:8080/";
+const urlSite = "https://cheemsandfriends.github.io/";
 
 const getAsset = (asset) => {
       
